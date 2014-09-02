@@ -220,7 +220,7 @@ public abstract class EntityLivingChest extends EntityLivingUtility
 		    this.setTrader(par1EntityPlayer);
 
 		    // 独自GUIを表示
-		    par1EntityPlayer.openGui(LivingUtility.instance, LivingUtility.CHEST_GUI_ID, this.worldObj, (int) this.posX, (int) this.posY, (int) this.posZ);
+		    par1EntityPlayer.openGui(LivingUtility.instance, LivingUtility.CHEST_GUI_ID, this.worldObj, this.getEntityId(),0,0);
 		}
 
 		// Itemを振る動作
