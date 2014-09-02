@@ -1,5 +1,6 @@
 package com.schr0.schr0box.livingutility.entity.chest;
 
+import com.schr0.schr0box.livingutility.entity.chest.inventory.InventoryLivingChest;
 import com.schr0.schr0box.livingutility.entity.chest.inventory.InventoryLivingEnderChest;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.world.World;
@@ -34,4 +35,16 @@ public class EntityLivingChest_Ender extends EntityLivingChest_Normal
 	this.getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.15D);
     }
 
+    @Override
+    protected void dropFewItems(boolean par1, int par2) {
+        InventoryLivingChest tmp = this.inventory;
+
+        //ownerが居たら空ドロップに
+        if(this.getOwner() != null)
+            this.inventory = new InventoryLivingChest(this);
+
+        super.dropFewItems(par1, par2);
+
+        this.inventory = tmp;
+    }
 }
