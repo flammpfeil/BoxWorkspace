@@ -1,0 +1,7 @@
+//-----------エンティティ-----------//
+entity.schr0box.livingutility.NormalChest.name=Living Normal Chest
+entity.schr0box.livingutility.EnderChest.name=Living Ender Chest
+
+//-----------アイテム-----------//
+item.itemHomePointTicket.name=ホーム ポイント チケット
+item.itemUtilityCore.name=ユーティリティ コア
